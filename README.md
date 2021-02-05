@@ -14,7 +14,7 @@ Implementation of so called Strong PUF. Second design
 * Paper claims that 20M plaintext/ciphertext pairs in combination with machine learning are not sufficient to predict better than 50%.
 
 
-![alt text](https://github.com/mahzoun/SPUF2/blob/master/media/design.)
+![alt text](https://github.com/mahzoun/SPUF2/blob/master/media/design.png)
 ### Run
 
 ```
