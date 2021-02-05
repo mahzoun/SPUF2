@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/SPUF2.dir/main.cpp.o  -o SPUF2 

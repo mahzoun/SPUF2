@@ -1,0 +1,3 @@
+/home/sauron/CLionProjects/SPUF2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/sauron/CLionProjects/SPUF2/cmake-build-debug/CMakeFiles/SPUF2.dir
+/home/sauron/CLionProjects/SPUF2/cmake-build-debug/CMakeFiles/edit_cache.dir
