@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/SPUF2.dir/PUF.cpp.o"
   "CMakeFiles/SPUF2.dir/main.cpp.o"
   "SPUF2"
   "SPUF2.pdb"

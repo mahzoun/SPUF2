@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/SPUF2.dir/main.cpp.o  -o SPUF2 
+/usr/bin/c++  -g   CMakeFiles/SPUF2.dir/main.cpp.o CMakeFiles/SPUF2.dir/PUF.cpp.o  -o SPUF2 

@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/sauron/CLionProjects/SPUF2/PUF.cpp">
+			<Option target="SPUF2"/>
+		</Unit>
+		<Unit filename="/home/sauron/CLionProjects/SPUF2/PUF.h">
+			<Option target="SPUF2"/>
+		</Unit>
 		<Unit filename="/home/sauron/CLionProjects/SPUF2/main.cpp">
 			<Option target="SPUF2"/>
 		</Unit>

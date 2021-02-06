@@ -123,6 +123,33 @@ SPUF2/fast:
 	$(MAKE) -f CMakeFiles/SPUF2.dir/build.make CMakeFiles/SPUF2.dir/build
 .PHONY : SPUF2/fast
 
+PUF.o: PUF.cpp.o
+
+.PHONY : PUF.o
+
+# target to build an object file
+PUF.cpp.o:
+	$(MAKE) -f CMakeFiles/SPUF2.dir/build.make CMakeFiles/SPUF2.dir/PUF.cpp.o
+.PHONY : PUF.cpp.o
+
+PUF.i: PUF.cpp.i
+
+.PHONY : PUF.i
+
+# target to preprocess a source file
+PUF.cpp.i:
+	$(MAKE) -f CMakeFiles/SPUF2.dir/build.make CMakeFiles/SPUF2.dir/PUF.cpp.i
+.PHONY : PUF.cpp.i
+
+PUF.s: PUF.cpp.s
+
+.PHONY : PUF.s
+
+# target to generate assembly for a file
+PUF.cpp.s:
+	$(MAKE) -f CMakeFiles/SPUF2.dir/build.make CMakeFiles/SPUF2.dir/PUF.cpp.s
+.PHONY : PUF.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... SPUF2"
 	@echo "... edit_cache"
+	@echo "... PUF.o"
+	@echo "... PUF.i"
+	@echo "... PUF.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
