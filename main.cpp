@@ -1,30 +1,31 @@
 #include <iostream>
 #include <bitset>
+#include <cmath>
+#include "utils.h"
 #include "PUF.h"
 
 using namespace std;
 
 int main() {
-	//srand(time(NULL));
+    ios_base::sync_with_stdio(false);
+	srand(time(NULL));
 	PUF puf;
+	utils util;
+	unsigned long long ans = 0;
 	bitset<100> input = 0;
-	for (int i = 0; i < 100; i++) {
-		//input = puf.RANDOM(input);
-		//cout << input << "\t" << puf.AUTH(input) << endl;
-	}
-
-	
 	int br1 = 0, br0 = 0, br_tot1=0,br_tot0=0;
-	for (int exp = 0; exp < 1000; exp++)
+	for (int exp = 0; exp < 1; exp++)
 	{
 		input = puf.RANDOM(input);
-		for (int i = 0; i < 32; i++)
+		for (long long i = 0; i < (1<<25); i++)
 		{
-			bitset<5> ii = bitset<5>(i);
+		    if(i % (1<<15) == 0)
+		        cout << i << endl;
+			bitset<25> ii = i;
 
-			for (int i = 0; i < 5; i++)
+			for (int i = 0; i < 25; i++)
 			{
-				input[i] = ii[i];
+				input[75 + i] = ii[i];
 			}
 			bool resp = puf.AUTH(input);
 			if (resp == 1) br1++;
@@ -33,7 +34,7 @@ int main() {
 		}
 		if (br1 > br0) br_tot1++;
 		else if (br0 > br1) br_tot0++;
-		if (br0>>20 || br1>20) cout<< "resp 0: " << br0 << ", resp 1: " << br1 << "    "<<input<<endl;
+		cout<< "resp 0: " << br0 << ", resp 1: " << br1 << "    "<<input<<endl;
 		//cout << "resp 0: " << br0 << ", resp 1: " << br1 << endl;
 		br1 = 0; br0 = 0;
 	}
