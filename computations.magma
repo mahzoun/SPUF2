@@ -1,0 +1,21 @@
+ans := 0;
+for w1 in [0 .. 32] do
+    for w2 in [0 .. 32] do
+        for w3 in [0 .. 32] do
+            for w4 in [0 .. 32] do
+                for w5 in [0 .. 32] do
+                    X1 := w1 * (32 - w2) + w2 * (2^5 - w1);
+                    X2 := X1 * (32 - w3) + w3 * (2^10 - X1);
+                    X3 := X2 * (32 - w4) + w4 * (2^15 - X2);
+                    X4 := X3 * (32 - w5) + w5 * (2^20 - X3);
+                    coef := Binomial(32, w1) * Binomial(32, w2) * Binomial(32, w3) * Binomial(32, w4) * Binomial(32, w5);
+                    coef *:= (2^24 + Abs(2^24 - X4))/(2^25);
+                    ans +:= coef;
+                end for;
+            end for;
+        end for;
+    end for;
+end for;
+print ans;
+print ans / 2^160;
+
